@@ -1,0 +1,200 @@
+/*
+Assets/style/style.qss
+
+Global stylesheet for the Smart Attendance System.
+Applied once, at the QApplication level (see main.py), so every
+window automatically inherits this look - no per-window styling needed.
+
+Color Palette:
+    Primary (Navy)     #1F3B57
+    Primary Hover      #2C4F73
+    Accent (Teal)      #2E86AB
+    Success (Green)    #27AE60
+    Danger (Red)       #E74C3C
+    Background         #F5F7FA
+    Card / Surface     #FFFFFF
+    Text Primary       #1F2937
+    Text Secondary     #6B7280
+    Border             #E2E8F0
+*/
+
+/* ---------- Base Window ---------- */
+QWidget {
+    background-color: #F5F7FA;
+    color: #1F2937;
+    font-family: "Segoe UI", "Calibri", sans-serif;
+    font-size: 13px;
+}
+
+/* ---------- Labels ---------- */
+QLabel {
+    background: transparent;
+}
+
+QLabel[role="title"] {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1F3B57;
+}
+
+QLabel[role="subtitle"] {
+    font-size: 12px;
+    color: #6B7280;
+}
+
+/* ---------- Line Edits (Text Inputs) ---------- */
+QLineEdit {
+    background-color: #FFFFFF;
+    border: 1.5px solid #E2E8F0;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 13px;
+    color: #1F2937;
+}
+
+QLineEdit:focus {
+    border: 1.5px solid #2E86AB;
+}
+
+/* ---------- Buttons (default / primary) ---------- */
+QPushButton {
+    background-color: #1F3B57;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+QPushButton:hover {
+    background-color: #2C4F73;
+}
+
+QPushButton:pressed {
+    background-color: #16293D;
+}
+
+QPushButton:disabled {
+    background-color: #B0BEC5;
+    color: #ECEFF1;
+}
+
+/* ---------- Secondary / Outline Buttons ---------- */
+QPushButton[role="secondary"] {
+    background-color: #FFFFFF;
+    color: #1F3B57;
+    border: 1.5px solid #1F3B57;
+}
+
+QPushButton[role="secondary"]:hover {
+    background-color: #EEF2F6;
+}
+
+/* ---------- Danger Buttons (logout, delete, cancel) ---------- */
+QPushButton[role="danger"] {
+    background-color: #FFFFFF;
+    color: #E74C3C;
+    border: 1.5px solid #E74C3C;
+}
+
+QPushButton[role="danger"]:hover {
+    background-color: #FDEDEC;
+}
+
+/* ---------- Dashboard Card Buttons ---------- */
+QPushButton[role="card"] {
+    background-color: #FFFFFF;
+    color: #1F3B57;
+    border: 1.5px solid #E2E8F0;
+    border-radius: 14px;
+    padding: 18px;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: left;
+}
+
+QPushButton[role="card"]:hover {
+    border: 1.5px solid #2E86AB;
+    background-color: #F0F7FA;
+}
+
+QPushButton[role="card"]:pressed {
+    background-color: #E3F0F5;
+}
+
+/* ---------- List Widget (live session attendance list) ---------- */
+QListWidget {
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    padding: 6px;
+    font-size: 12px;
+}
+
+QListWidget::item {
+    padding: 6px 4px;
+    border-bottom: 1px solid #F0F2F5;
+}
+
+QListWidget::item:last-child {
+    border-bottom: none;
+}
+
+/* ---------- Table ---------- */
+QTableWidget {
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    gridline-color: #EEF1F4;
+    selection-background-color: #DCEEF5;
+    selection-color: #1F2937;
+}
+
+QHeaderView::section {
+    background-color: #1F3B57;
+    color: #FFFFFF;
+    font-weight: 600;
+    padding: 8px;
+    border: none;
+}
+
+QTableWidget::item {
+    padding: 6px;
+}
+
+/* ---------- Scrollbars (subtle, modern) ---------- */
+QScrollBar:vertical {
+    background: #F5F7FA;
+    width: 10px;
+    margin: 0;
+}
+
+QScrollBar::handle:vertical {
+    background: #C7D0D9;
+    border-radius: 5px;
+    min-height: 24px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #9AA7B2;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0;
+}
+
+/* ---------- Message Boxes ---------- */
+QMessageBox {
+    background-color: #FFFFFF;
+}
+
+QMessageBox QLabel {
+    color: #1F2937;
+    font-size: 13px;
+}
+
+QMessageBox QPushButton {
+    min-width: 80px;
+    padding: 8px 14px;
+}

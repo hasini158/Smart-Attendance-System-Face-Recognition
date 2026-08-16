@@ -1,0 +1,22 @@
+# Virtual environment - never share, machine-specific
+venv/
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# Logs
+logs/*.log
+
+# Personal / sensitive data - do not upload real face data or the live database
+Dataset/raw_faces/
+Dataset/encodings/
+Dataset/attendance_logs/
+Database/attendance.db
+
+# VS Code settings (optional - keep if you don't want to share editor config)
+.vscode/
+
+# OS junk files
+.DS_Store
+Thumbs.db
